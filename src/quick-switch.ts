@@ -68,7 +68,8 @@ export class QuickSwitch {
         const extension: string = file.substr(file.lastIndexOf('.') + 1).toLowerCase();
         const fileName: string = file.substr(0, file.lastIndexOf('.') + 1);
 
-        if (extension !== 'ts' && extension !== 'html') {
+        if (extension !== 'ts' && extension !== 'html' && extension !== 'scss') {
+            window.showInformationMessage('Unsupported file type');
             return undefined;
         }
 

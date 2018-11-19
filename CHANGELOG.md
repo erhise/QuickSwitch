@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.4] - 2018-11-19
+### Added
+- Information message if not supported file type
+
 ## [1.0.3] - 2018-11-19
 ### Fix
 - Change command name beacuse of naming conflict
