@@ -60,6 +60,7 @@ export class QuickSwitch {
         const editor = window.activeTextEditor;
 
         if (!editor) {
+            window.showInformationMessage('Make sure editor is active');
             return undefined;
         }
 

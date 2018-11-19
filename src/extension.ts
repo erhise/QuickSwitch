@@ -5,21 +5,26 @@ import { QuickSwitch } from './quick-switch';
 export function activate(ctx: ExtensionContext): void {
 
     const quickSwitch = new QuickSwitch();
+
     const toggleFiles = commands.registerCommand('extension.ngQuickSwitchToggle', () => {
         quickSwitch.toggleComponentFiles();
     });
-    const openClassFile = commands.registerCommand('extension.ngQuickSwitchOpenClass', () => {
+    const openClassFile = commands.registerCommand('extension.open.class', () => {
         quickSwitch.openFile('ts');
-    });
-    const openTemplateFile = commands.registerCommand('extension.ngQuickSwitchOpenTemplate', () => {
+    });    
+    const openTemplateFile = commands.registerCommand('extension.open.template', () => {
         quickSwitch.openFile('html');
     });
-    const openStyleFile = commands.registerCommand('extension.ngQuickSwitchOpenStyle', () => {
+    const openStyleFile = commands.registerCommand('extension.open.style', () => {
         quickSwitch.openFile('scss');
     });
 
-    ctx.subscriptions.push(toggleFiles);
-    ctx.subscriptions.push(openClassFile);
-    ctx.subscriptions.push(openTemplateFile);
-    ctx.subscriptions.push(openStyleFile);
+    ctx.subscriptions.push(
+        toggleFiles,
+        openClassFile,
+        openTemplateFile,
+        openStyleFile,
+    );
 }
+
+export function deactivate() {}

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.3] - 2018-11-19
+### Fix
+- Change command name beacuse of naming conflict
+
 ## [1.0.2] - 2018-11-19
 ### Added
 - Information message if not found

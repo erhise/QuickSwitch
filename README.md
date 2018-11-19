@@ -2,6 +2,13 @@
 
 This extension for Visual Studio Code lets you quickly switch between your associated component files. Enables you to quickly reach your template file for better productivity.
 
+## Invoke via Command Palette
+Open Command Palette with `CTRL+SHIFT+P` and search for:
+* Workspace: Toggle associated component files
+* Workspace: Open component class file
+* Workspace: Open component template file
+* Workspace: Open component style file
+
 ## Default Keyboard Shortcuts
 To change default settings open up Keyboard Shortcuts (CTRL K CTRL S) and search for `ngQuickSwitch`.
 
@@ -11,9 +18,9 @@ To change default settings open up Keyboard Shortcuts (CTRL K CTRL S) and search
 ```
 * Open component ( class | template | style ) file
 ```
-"extension.ngQuickSwitchOpenClass": "ctrl+numpad1",
-"extension.ngQuickSwitchOpenTemplate": "ctrl+numpad2",
-"extension.ngQuickSwitchOpenStyle": "ctrl+numpad3"
+"extension.open.class": "ctrl+numpad1",
+"extension.open.template": "ctrl+numpad2",
+"extension.open.style": "ctrl+numpad3"
 ```
 
 ## Release notes

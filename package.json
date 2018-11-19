@@ -2,7 +2,7 @@
     "name": "vs-ng-quick-switch",
     "displayName": "Angular QuickSwitch",
     "description": "Jump between component files, switch back and forth to associated template.",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "publisher": "erhise",
     "license": "MIT",
     "engines": {
@@ -21,9 +21,9 @@
     ],
     "activationEvents": [
         "onCommand:extension.ngQuickSwitchToggle",
-        "onCommand:extension.ngQuickSwitchOpenClass",
-        "onCommand:extension.ngQuickSwitchOpenTemplate",
-        "onCommand:extension.ngQuickSwitchOpenStyle"
+        "onCommand:extension.open.class",
+        "onCommand:extension.open.template",
+        "onCommand:extension.open.style"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -34,17 +34,17 @@
                 "category": "Workspace"
             },
             {
-                "command": "extension.ngQuickSwitchOpenClass",
+                "command": "extension.open.class",
                 "title": "Open component class file",
                 "category": "Workspace"
             },
             {
-                "command": "extension.ngQuickSwitchOpenTemplate",
+                "command": "extension.open.template",
                 "title": "Open component template file",
                 "category": "Workspace"
             },
             {
-                "command": "extension.ngQuickSwitchOpenStyle",
+                "command": "extension.open.style",
                 "title": "Open component style file",
                 "category": "Workspace"
             }
@@ -52,23 +52,19 @@
         "keybindings": [
             {
                 "command": "extension.ngQuickSwitchToggle",
-                "key": "ctrl+alt+t",
-                "when": "editorTextFocus"
+                "key": "ctrl+alt+t"
             },
             {
-                "command": "extension.ngQuickSwitchOpenClass",
-                "key": "ctrl+numpad1",
-                "when": "editorTextFocus"
+                "command": "extension.open.class",
+                "key": "ctrl+numpad1"
             },
             {
-                "command": "extension.ngQuickSwitchOpenTemplate",
-                "key": "ctrl+numpad2",
-                "when": "editorTextFocus"
+                "command": "extension.open.template",
+                "key": "ctrl+numpad2"
             },
             {
-                "command": "extension.ngQuickSwitchOpenStyle",
-                "key": "ctrl+numpad3",
-                "when": "editorTextFocus"
+                "command": "extension.open.style",
+                "key": "ctrl+numpad3"
             }
         ]
     },
