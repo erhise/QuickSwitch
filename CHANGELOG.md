@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.5] - 2018-11-19
+### Added
+- Preperation for enabling user settings to control their own preferences
+
 ## [1.0.4] - 2018-11-19
 ### Added
 - Information message if not supported file type

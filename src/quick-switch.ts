@@ -22,6 +22,8 @@ export class QuickSwitch {
         }
         else if (extension === 'html' && QuickSwitch.fileExists(fileName + 'ts')) {
             newExtension = 'ts';
+        } else if (extension === 'scss' && QuickSwitch.fileExists(fileName + 'ts')) {
+            newExtension = 'ts';
         }
 
         if (newExtension.length > 0) {

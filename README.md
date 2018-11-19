@@ -10,7 +10,7 @@ Open Command Palette with `CTRL+SHIFT+P` and search for:
 * Workspace: Open component style file
 
 ## Default Keyboard Shortcuts
-To change default settings open up Keyboard Shortcuts (CTRL K CTRL S) and search for `ngQuickSwitch`.
+To change default settings open up Keyboard Shortcuts (CTRL K CTRL S) and search for `ngQuickSwitch` or some of the commands below.
 
 * Toggle associated component files (switch back and forth between template file)
 ```
