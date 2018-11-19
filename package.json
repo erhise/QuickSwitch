@@ -2,7 +2,7 @@
     "name": "vs-ng-quick-switch",
     "displayName": "Angular QuickSwitch",
     "description": "Jump between component files, switch back and forth to associated template.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "erhise",
     "license": "MIT",
     "engines": {
@@ -30,7 +30,7 @@
         "commands": [
             {
                 "command": "extension.ngQuickSwitchToggle",
-                "title": "Switch/toggle associated component files",
+                "title": "Toggle associated component files",
                 "category": "Workspace"
             },
             {

@@ -28,6 +28,8 @@ export class QuickSwitch {
             workspace.openTextDocument(fileName + newExtension).then(
                 document => window.showTextDocument(document)
             );
+        } else {
+            window.showErrorMessage('No matching file found');
         }
     }
 
@@ -38,18 +40,19 @@ export class QuickSwitch {
             return;
         }
         
-        const { fileName, extension } = file;
+        const { fileName } = file;
         
         let newExtension: string = '';
         if (QuickSwitch.fileExists(fileName + withExtension)) {
             newExtension = withExtension;
         }
         
-        console.log('ext', withExtension, fileName, extension, newExtension);
         if (newExtension.length > 0) {
             workspace.openTextDocument(fileName + newExtension).then(
                 document => window.showTextDocument(document)
             );
+        } else {
+            window.showErrorMessage('No matching file found');
         }
     }
     
