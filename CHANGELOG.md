@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.6] - 2019-01-12
+### Added
+- Add .spec.ts into possible switch case
+
 ## [1.0.5] - 2018-11-19
 ### Added
 - Preperation for enabling user settings to control their own preferences

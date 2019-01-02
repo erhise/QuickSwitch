@@ -18,12 +18,16 @@ export function activate(ctx: ExtensionContext): void {
     const openStyleFile = commands.registerCommand('extension.open.style', () => {
         quickSwitch.openFile('scss');
     });
+    const openTestFile = commands.registerCommand('extension.open.test', () => {
+        quickSwitch.openFile('spec.ts');
+    });
 
     ctx.subscriptions.push(
         toggleFiles,
         openClassFile,
         openTemplateFile,
         openStyleFile,
+        openTestFile,
     );
 }
 

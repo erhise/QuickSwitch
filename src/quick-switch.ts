@@ -17,13 +17,23 @@ export class QuickSwitch {
         const { fileName, extension } = file;
 
         let newExtension: string = '';
-        if (extension === 'ts' && QuickSwitch.fileExists(fileName + 'html')) {
-            newExtension = 'html';
-        }
-        else if (extension === 'html' && QuickSwitch.fileExists(fileName + 'ts')) {
-            newExtension = 'ts';
-        } else if (extension === 'scss' && QuickSwitch.fileExists(fileName + 'ts')) {
-            newExtension = 'ts';
+        switch (extension) {
+            case 'ts':
+                if (QuickSwitch.fileExists(fileName + 'html')) {
+                    newExtension = 'html';
+                }
+                break;
+        
+            case 'html':
+            case 'scss':
+            case 'css':
+            case 'spec.ts':
+                if (QuickSwitch.fileExists(fileName + 'ts')) {
+                    newExtension = 'ts';
+                }
+
+            default:
+                break;
         }
 
         if (newExtension.length > 0) {
@@ -47,6 +57,10 @@ export class QuickSwitch {
         let newExtension: string = '';
         if (QuickSwitch.fileExists(fileName + withExtension)) {
             newExtension = withExtension;
+        } else if (withExtension === 'scss') {
+            if (QuickSwitch.fileExists(fileName + 'css')) {
+                newExtension = 'css';
+            }
         }
         
         if (newExtension.length > 0) {
@@ -67,14 +81,25 @@ export class QuickSwitch {
         }
 
         const file: string = editor.document.fileName;
-        const extension: string = file.substr(file.lastIndexOf('.') + 1).toLowerCase();
-        const fileName: string = file.substr(0, file.lastIndexOf('.') + 1);
 
-        if (extension !== 'ts' && extension !== 'html' && extension !== 'scss') {
+        let extension: string, fileName: string;
+        if (file.endsWith('.spec.ts')) {
+            extension = 'spec.ts';
+            fileName = file.substr(0, file.length - extension.length);
+        } else {
+            extension = file.substr(file.lastIndexOf('.') + 1).toLowerCase();
+            fileName = file.substr(0, file.lastIndexOf('.') + 1);
+        }
+
+        if (extension !== 'ts'
+            && extension !== 'html'
+            && extension !== 'scss'
+            && extension !== 'css'
+            && extension !== 'spec.ts'
+        ) {
             window.showInformationMessage('Unsupported file type');
             return undefined;
         }
-
         return { fileName, extension };
     }
 
