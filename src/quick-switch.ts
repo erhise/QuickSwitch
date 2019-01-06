@@ -68,7 +68,8 @@ export class QuickSwitch {
                 document => window.showTextDocument(document)
             );
         } else {
-            window.showErrorMessage('No matching file found');
+            const pieces = fileName.split('/');
+            window.showErrorMessage(`${pieces[pieces.length - 1]}${withExtension} was not found (ERR: no matching file found).`);
         }
     }
     
@@ -97,7 +98,7 @@ export class QuickSwitch {
             && extension !== 'css'
             && extension !== 'spec.ts'
         ) {
-            window.showInformationMessage('Unsupported file type');
+            window.showInformationMessage('Unsupported file type', extension);
             return undefined;
         }
         return { fileName, extension };

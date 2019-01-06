@@ -11,7 +11,7 @@ The default keybindings to all commands are
 * Open component class file (.spec.ts) : `Ctrl + NumPad4`
 
 ## Change to your own keybindings
-To change default settings open up Keyboard Shortcuts (CTRL K + CTRL S), or your settings.json. Replace keybinding to something of your own preference.
+To change default settings open up Keyboard Shortcuts (CTRL K + CTRL S), or your keybindings.json. Replace keybinding to something of your own preference.
 
 * Commands for opening component ( class | template | style | test ) file
 ```json

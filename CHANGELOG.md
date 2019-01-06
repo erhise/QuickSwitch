@@ -1,6 +1,10 @@
 # Changelog
 
-## [1.0.6] - 2019-01-12
+## [1.0.7] - 2019-01-06
+### Added
+- Add reference to specific file when file not found error
+
+## [1.0.6] - 2019-01-02
 ### Added
 - Add .spec.ts into possible switch case
 
